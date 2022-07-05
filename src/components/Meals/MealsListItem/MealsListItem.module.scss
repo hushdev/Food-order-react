@@ -1,0 +1,30 @@
+.item {
+ display: flex; 
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 1px solid #969696;
+
+ padding: 10px 0;
+ &:first-child {
+  padding: 0 0 10px 0;
+ }
+ &:last-child {
+  padding: 10px 0 0 0;
+  border-bottom: 0;
+ }
+ .left {
+  .price {
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .name {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .desc {
+    font-size: 16px;
+  }
+ }
+}

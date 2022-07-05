@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import background from "../../HeaderBG.jpg";
-import CartBtn from "../UI/CartBtn";
+import background from "../../../HeaderBG.jpg";
+import CartBtn from "../../Cart/CartBtn/CartBtn";
 
 const Header = () => {
   const cartBtnClickHandler = () => {

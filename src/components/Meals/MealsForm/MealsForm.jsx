@@ -5,6 +5,12 @@ import Input from "../../UI/Input/Input";
 
 const MealsForm = (props) => {
   const [counter, setCounter] = useState(1);
+  const [submitted, setSubmitted] = useState(false);
+
+  const cancelHandler = () => {
+    setSubmitted(false);
+    // TODO - remove from cart logic
+  }
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -14,10 +20,11 @@ const MealsForm = (props) => {
       description: props.description,
       price: props.price * counter,
       amount: counter,
+      id: props.id
     };
 
     console.log(data);
-    alert('Done!');
+    setSubmitted(true);
   };
 
   const increment = () => {
@@ -30,18 +37,42 @@ const MealsForm = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler} className={styles.form}>
-      <Button type="button" onClick={decrement} className={styles.decrement}>
-        —
-      </Button>
-      <Input id="mealsCounter" value={counter} readOnly={true} type="text" />
-      <Button type="button" onClick={increment} className={styles.increment}>
-        +
-      </Button>
-      <Button type="submit" className={styles.formBtn}>
-        Add
-      </Button>
-    </form>
+    <>
+      {!submitted ? (
+        <form onSubmit={submitHandler} className={styles.form}>
+          {/* Decrement button */}
+          <Button
+            type="button"
+            onClick={decrement}
+            className={styles.decrement}
+          >
+            —
+          </Button>
+          {/* Value input */}
+          <Input
+            id="mealsCounter"
+            value={counter}
+            readOnly={true}
+            type="text"
+          />
+          {/* Increment button */}
+          <Button
+            type="button"
+            onClick={increment}
+            className={styles.increment}
+          >
+            +
+          </Button>
+          {/* Submit button */}
+          <Button type="submit" className={styles.formBtn}>
+            Add to cart
+          </Button>
+        </form>
+      ) : (
+        // Remove from cart button
+        <Button onClick={cancelHandler} type="button" className={styles.cancelBtn}>Remove from cart</Button>
+      )}
+    </>
   );
 };
 

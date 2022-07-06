@@ -29,49 +29,49 @@ const MOCK_DATA = [
     price: 18.99,
   },
   {
-    id: "m1",
+    id: "m5",
     name: "Sushi",
     description: "Finest fish and veggies",
     price: 22.99,
   },
   {
-    id: "m2",
+    id: "m6",
     name: "Schnitzel",
     description: "A german specialty!",
     price: 16.5,
   },
   {
-    id: "m3",
+    id: "m7",
     name: "Barbecue Burger",
     description: "American, raw, meaty",
     price: 12.99,
   },
   {
-    id: "m4",
+    id: "m8",
     name: "Green Bowl",
     description: "Healthy...and green...",
     price: 18.99,
   },
   {
-    id: "m1",
+    id: "m9",
     name: "Sushi",
     description: "Finest fish and veggies",
     price: 22.99,
   },
   {
-    id: "m2",
+    id: "m10",
     name: "Schnitzel",
     description: "A german specialty!",
     price: 16.5,
   },
   {
-    id: "m3",
+    id: "m11",
     name: "Barbecue Burger",
     description: "American, raw, meaty",
     price: 12.99,
   },
   {
-    id: "m4",
+    id: "m12",
     name: "Green Bowl",
     description: "Healthy...and green...",
     price: 18.99,
@@ -85,6 +85,7 @@ const AvailableMeals = () => {
       name={meal.name}
       description={meal.description}
       price={meal.price}
+      id={meal.id}
     />
   ));
 

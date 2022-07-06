@@ -24,3 +24,10 @@
     margin-left: 10px;
   }
 }
+
+.cancelBtn {
+  background: #383838 !important;
+  &:hover {
+    background: #222222;
+  }
+}

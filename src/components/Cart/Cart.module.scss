@@ -1,0 +1,38 @@
+.cart {
+  max-width: 420px;
+  min-width: 300px;
+  width: 100%;
+  ul {
+    list-style-type: none;
+    height: 200px;
+    overflow-y: scroll;
+    padding-right: 10px;
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid #6cc6c6;
+      display: flex;
+      justify-content: space-between;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  &__btns {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    .cancel_btn {
+
+    }
+    .order_btn {
+      background: green;
+      margin-left: 10px;
+    }
+  }
+}
